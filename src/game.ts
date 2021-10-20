@@ -14,7 +14,7 @@ class Game {
   }
 
   // method that controls the flow of the game
-  runGame() {
+  runGame(): void {
     this.gameMessage()
     this.multiplayer()
     this.outcome()
@@ -22,7 +22,7 @@ class Game {
   }
 
   // displays opening game message
-  gameMessage() {
+  gameMessage(): void {
     console.clear()
     console.log(`${this.player1.name} has entered the fray...`)
     console.log('Welcome to rock, paper, scissors, lizard, spock!')
@@ -38,7 +38,7 @@ class Game {
     `)
   }
 
-  gestureCompare() {
+  gestureCompare(): void {
     while (this.player1.score < 3 && this.player2.score < 3) {
       this.player1.gestures()
       this.player2.gestures()
@@ -49,7 +49,7 @@ class Game {
     }
   }
 
-  gestureDecision() {
+  gestureDecision(): void {
 
     if (this.player1.choice === this.player2.choice) {
       console.log('tie! play again!')
@@ -72,7 +72,7 @@ class Game {
     }
   }
 
-  outcome() {
+  outcome(): void {
     if (this.player1.score === 3 || this.player2.score === 3) {
       if (this.player1.score > this.player2.score) {
         console.clear()
@@ -84,7 +84,7 @@ class Game {
     }
   }
 
-  multiplayer() {
+  multiplayer(): void {
     console.log('would you like to play multiplayer? yes or no: ')
     let userInput = prompt()
 
@@ -101,7 +101,7 @@ class Game {
     }
   }
 
-  restart() {
+  restart(): void {
     console.log('would you like to play again? yes or no: ')
     let playAgain = prompt()
 

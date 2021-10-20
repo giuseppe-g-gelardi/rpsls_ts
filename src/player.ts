@@ -1,6 +1,6 @@
 export{}
 class Player {
-  name: string
+  public name: string
   score: number
   playerMoves: string[]
   choice: string

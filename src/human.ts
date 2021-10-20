@@ -8,9 +8,9 @@ class Human extends Player {
     super(name)
   }
 
-  gestures() {
+  gestures(): void {
     console.log('please choose: rock, paper, scissors, lizard or spock')
-    let playerChoice = prompt()
+    let playerChoice: string = prompt()
     
     this.choice = this.playerMoves.find((move: string | null) => move === playerChoice)
 
