@@ -54,11 +54,13 @@ class Game {
     if (this.player1.choice === this.player2.choice) {
       console.log('tie! play again!')
     } else if 
-      (((this.player1.choice === 'rock') && (this.player2.choice === 'scissors' || this.player2.choice === 'lizard')) ||
+      (
+      ((this.player1.choice === 'rock') && (this.player2.choice === 'scissors' || this.player2.choice === 'lizard')) ||
       ((this.player1.choice === 'scissors') && (this.player2.choice === 'paper' || this.player2.choice === 'lizard')) ||
       ((this.player1.choice === 'paper') && (this.player2.choice === 'rock' || this.player2.choice === 'spock')) ||
       ((this.player1.choice === 'lizard') && (this.player2.choice === 'spock' || this.player2.choice === 'paper')) ||
-      ((this.player1.choice === 'spock') && (this.player2.choice === 'scissors' || this.player2.choice === 'rock'))) {
+      ((this.player1.choice === 'spock') && (this.player2.choice === 'scissors' || this.player2.choice === 'rock'))
+      ) {
         this.player1.score += 1
         console.clear()
         console.log(`${this.player1.choice} beats ${this.player2.choice}!. Player 1 wins!`)
